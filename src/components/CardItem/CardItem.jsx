@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 function CardItem(props) {
+    
     return (
         <>
         {/* {props.id} */}
