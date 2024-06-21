@@ -3,38 +3,45 @@
     "id": 1,
     "imagenUrl": "https://tiendas.contapyme.com.ar/clientes/goodgames/archivos/images/9/image_2435.jpg",
     "nombre": "Lavarropas Whirlpool",
-    "precio": 500000
+    "precio": 500000,
+    "categoria": "lavarropas"
 },
 {   
     "id": 2,
     "imagenUrl": "https://lualcred.com.ar/web/wp-content/uploads/2022/09/lavarropas-drean-8kg.jpeg",
     "nombre": "Lavarropas Drean",
-    "precio": 450000
+    "precio": 450000,
+    "categoria": "lavarropas"
+    
 },
 {   
     "id": 3,
     "imagenUrl": "https://whirlpoolarg.vtexassets.com/arquivos/ids/162922/Copia-de-perspectiva-B-min.jpg?v=637822061940370000",
     "nombre": "Microondas Whirlpool",
-    "precio": 150000
+    "precio": 150000,
+    "categoria": "microondas"
 },
 {   
     "id": 4,
     "imagenUrl": "https://images.fravega.com/f1000/a3500b86977929efad3f9d059f73c435.jpg",
     "nombre": "Microondas BGH",
-    "precio": 80000
+    "precio": 80000,
+    "categoria": "microondas"
 },
 {   
     "id": 5,
     "imagenUrl": "https://images.fravega.com/f1000/9e26568352f9b3ffa548cb49219a24b3.jpg", 
     "nombre": "Heladera Whirlpool",
-    "precio": 1000000
+    "precio": 1000000,
+    "categoria": "heladeras"
 },
 {   
     "id": 6,
     "imagenUrl": "https://electroluxar.vtexassets.com/arquivos/ids/162885/electrolux_HENI3000P-1000x1000-1.jpg?v=638245924605800000"
     ,
     "nombre": "Heladera Electrolux",
-    "precio": 800000
+    "precio": 800000,
+    "categoria": "heladeras"
 }
 
 ]
