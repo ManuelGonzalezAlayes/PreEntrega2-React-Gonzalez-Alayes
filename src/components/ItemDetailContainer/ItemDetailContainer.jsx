@@ -1,27 +1,32 @@
-import productosData from '../../assets/productos.json';
-import Card from 'react-bootstrap/Card';
 import CardItem from '../CardItem/CardItem';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase/client';
 
 function ItemDetailContainer() {
-    const [productos, setProductos] = useState([]);
+    const [producto, setProducto] = useState({});
 
-useEffect(() => {
-setProductos(productosData);
-}, []);
+    let { id } = useParams();
 
-let params = useParams();
-console.log (params)
+    async function getProduct() {
+        const productRef = doc(db, 'productos', id);
+        const productSnapshot = await getDoc(productRef);
+        if(productSnapshot.exists()){
+            return productSnapshot.data();
+        }
+        return {};
+    }
 
-const filterId =(producto) => {
-    
-    return producto.id==params.id
-}
-return (
-    <div>
-        {productos.filter(filterId).map( (producto) => {
-            return (
+    useEffect(() => {
+        (async () => {
+            const producto = await getProduct();
+            setProducto(producto);
+        })()
+    })
+
+    return (
+        <div>
             <CardItem
                 key={producto.id}
                 id={producto.id}
@@ -29,9 +34,8 @@ return (
                 nombre={producto.nombre}
                 precio={producto.precio}
                 categoria={producto.categoria}
-                />)
-        } )}
-    </div>
-)
+            />
+        </div>
+    )
 }
 export default ItemDetailContainer;

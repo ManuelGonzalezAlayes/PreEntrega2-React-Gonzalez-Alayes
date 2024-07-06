@@ -1,0 +1,37 @@
+.containerNosotros h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    margin-left: 30px;
+}
+
+.containerNosotros h3 {
+    color: #0056b3;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.containerNosotros p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

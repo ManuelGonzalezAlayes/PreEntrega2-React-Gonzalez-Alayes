@@ -7,7 +7,7 @@ import CartWidget from '../CartWidget/CartWidget';
 import { LinkContainer } from 'react-router-bootstrap';
 
 function NavBar() {
-  return (
+    return (
         <Navbar bg="primary" data-bs-theme="dark">
             <Container>
                 <LinkContainer to="/">
@@ -17,7 +17,7 @@ function NavBar() {
                 <LinkContainer to="/">
                     <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/">
+                <LinkContainer to="/nosotros">
                     <Nav.Link>Nosotros</Nav.Link>
                 </LinkContainer>
                 <NavDropdown title="Productos" id="basic-nav-dropdown">
@@ -32,8 +32,15 @@ function NavBar() {
                     </LinkContainer>
                 </NavDropdown>
 
-                <CartWidget />
-                <Nav.Link href="#contacto">Contacto</Nav.Link>
+                <LinkContainer to="/cart">
+                    <Nav.Link>
+                        <CartWidget />
+                    </Nav.Link>
+                </LinkContainer>
+
+                <LinkContainer to="/contacto">
+                    <Nav.Link>Contacto</Nav.Link>
+                </LinkContainer>
                 </Nav>
             </Container>
         </Navbar>
@@ -41,14 +48,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-
-    // <div className="navbar-container">
-    //     <h1>TechArg</h1>
-    //     <div>
-    //         <p>Inicio</p>
-    //         <p>Productos</p>
-    //         <p>Nosotros</p>
-    //         <p>Contacto</p>
-    //     </div>
-    // </div>
